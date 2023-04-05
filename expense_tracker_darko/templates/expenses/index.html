@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}expenses{% endblock %}
+
+{% block content %}
+
+<h1>Expenses</h1>
+<ul>
+  {% for expense in expenses %}
+  <li>
+    <span>{{ expense.concept }}</span>
+    -
+    <span>{{ expense.amount }}</span>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock content %}
